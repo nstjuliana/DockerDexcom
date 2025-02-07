@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 import json
 from dotenv import load_dotenv
 import os
+error = ""
 
 load_dotenv()
 
@@ -71,6 +72,7 @@ def CorrectRecords():
 		print("Failed to Correct Records. Error: " + error)
 
 def read24Hours():
+	global error
 	#Get Glucose Readings (past 24 hours)
 	try:
 		glucose_readings = dexcom.get_glucose_readings()
