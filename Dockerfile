@@ -9,6 +9,9 @@ COPY requirements.txt ./
 
 COPY dexcom.py ./
 
+# Copy the .env file
+COPY .env ./
+
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
